@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>TODOリスト</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="lib/css/reset.css">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<main ng-controller="TodoCtrl">
+<h1>TODOリスト</h1>
+<div class="todoListWrap">
+<form ng-submit="postTodo()">
+<input type="text" value="" class="todoText" placeholder="TODOを追加する" ng-model="todoText">
+</form>
+<ul class="todoList" ng-repeat="todo in todoList.todos">
+<li>{{todo.text}}<button class="btnDelete" ng-click="todoList.delete($index)">削除する</button></li>
+</ul>
+</div>
+<button class="btnSort" ng-click="todoList.sort()">ソートする</button>
+</main>
+<script src="lib/js/angular.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

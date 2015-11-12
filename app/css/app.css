@@ -1,0 +1,81 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Helvetica, Arial, "ヒラノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: #7d7d7d;
+}
+
+main {
+  margin: 0 auto;
+  padding: 30px 15px;
+  width: 100%;
+  max-width: 600px;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+
+*[class^=btn] {
+  -webkit-appearance: none;
+  padding: 0 15px;
+  height: 34px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  line-height: 32px;
+  text-align: center;
+  cursor: pointer;
+}
+
+*[class^=btn]:focus,
+.todoListWrap .todoText:focus {
+  outline: none;
+}
+
+.btnDelete {
+  background-color: #FF6464;
+}
+
+.btnSort {
+  background-color: #3294C3;
+}
+
+.todoListWrap {
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-bottom: none;
+}
+
+.todoListWrap .todoText {
+  padding: 15px 10px;
+  width: 100%;
+  font-size: 20px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+}
+
+.todoListWrap .todoList li {
+  position: relative;
+  padding: 12px 115px 12px 10px;
+  border-bottom: 1px solid #ddd;
+  list-style: none;
+  font-size: 20px;
+  word-break: break-all;
+}
+
+.todoListWrap .todoList .btnDelete {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  margin-top: -17px;
+}
+
